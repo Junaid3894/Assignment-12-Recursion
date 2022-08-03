@@ -1,0 +1,23 @@
+/*8. Write a recursive function to print binary of a given decimal number*/
+
+#include<stdio.h>
+void b_to_d(int n);// function prototype
+int main()
+{
+int n;
+// input number from user 
+printf("Enter the binary number :");
+scanf("%d",&n);
+b_to_d(n); // function calling
+return 0;
+}
+void b_to_d(int n){ // function defination
+    if(n==1){
+        printf("1",n);
+    }
+    else{
+    b_to_d(n/2);
+    printf("%d",n%2);
+    }
+   
+}
