@@ -1,0 +1,26 @@
+/*10. Write a recursive function to print reverse of a given number*/
+
+#include<stdio.h>
+int rev(int n);// function prototype
+int main()
+{
+int n;
+printf("Enter the number :");
+scanf("%d",&n);
+printf("Your reversing number is %d",rev(n));
+
+return 0;
+}
+int rem=0;
+int sum=0;
+int rev(int n){ // function defination
+    if(n>0){
+        rem=n%10;
+        sum=sum*10+rem;
+        rev(n/10);
+    }
+    else{
+        return sum;
+    }
+   
+}
