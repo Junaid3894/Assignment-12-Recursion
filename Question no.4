@@ -1,0 +1,23 @@
+/*4. Write a recursive function to print first N odd natural numbers in reverse order*/
+
+#include<stdio.h>
+void  printN(int n);// function prototype
+int main()
+{
+int n;
+// input number from user 
+printf("Enter how many natural numbers you want to see :");
+scanf("%d",&n);
+printN(n); // function calling
+return 0;
+}
+void printN(int n){ // function defination
+   if(n>0){
+      if(n%2) // check odd condition before printing 
+      {
+      printf("%d\t",n);
+      }
+      printN(n-1);
+   }
+
+}
